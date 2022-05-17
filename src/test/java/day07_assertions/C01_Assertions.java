@@ -20,6 +20,7 @@ public class C01_Assertions {
 
      */
 
+
     static WebDriver driver;
 
     @BeforeClass
