@@ -49,6 +49,7 @@ public class C04_IFrame {
         // switchTo() ile o iFrame'e gecmeliyiz
         WebElement iFrameElementi=driver.findElement(By.id("mce_0_ifr"));
         driver.switchTo().frame(iFrameElementi);
+
         WebElement textkutusu= driver.findElement(By.xpath("//body[@id='tinymce']"));
         textkutusu.clear();
         textkutusu.sendKeys("Mehaba Dunya");
