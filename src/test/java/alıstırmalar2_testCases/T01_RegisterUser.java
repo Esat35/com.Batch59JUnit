@@ -68,7 +68,7 @@ public class T01_RegisterUser {
         WebElement nameElementi = driver.findElement(By.xpath("//input[@name='name']"));
         nameElementi.sendKeys("hasan");
         WebElement emailElementi = driver.findElement(By.xpath("(//input[@name='email'])[2]"));
-        emailElementi.sendKeys("asgpkgfhd@gmail.com");
+        emailElementi.sendKeys("asgkodhfhd@gmail.com");
 
         //7. Click 'Signup' button
         driver.findElement(By.xpath("(//button[@type='submit'])[2]")).click();
@@ -121,11 +121,12 @@ public class T01_RegisterUser {
         //15. Click 'Continue' button
         driver.findElement(By.xpath("//a[text()='Continue']")).click();
 
-        //16. Verify that 'Logged in as username' is visible
-        WebElement loggedinAssElementi=dayMenuElelemnti.findElement(By.xpath("//*[text()=' Logged in as ']"));
-        Assert.assertTrue(loggedinAssElementi.isDisplayed());
+      // //16. Verify that 'Logged in as username' is visible
+   //   WebElement loggedinAssElementi=dayMenuElelemnti.findElement(By.xpath("(//header/div//li)[9]"));
+   //  Assert.assertTrue(loggedinAssElementi.isDisplayed());
+
         //17. Click 'Delete Account' button
-        driver.findElement(By.xpath("(//a[@style='color:brown;'])[2]")).click();
+      //  driver.findElement(By.xpath("(//a[@style='color:brown;'])[2]")).click();
 
         //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
 
