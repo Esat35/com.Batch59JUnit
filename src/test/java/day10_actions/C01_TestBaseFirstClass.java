@@ -1,4 +1,19 @@
 package day10_actions;
 
-public class C01_TestBaseFirstClass {
+import org.junit.Test;
+import utilities.TestBase;
+
+public class C01_TestBaseFirstClass extends TestBase {
+
+   @Test
+   public void testC01(){
+     driver.get("https://www.amazon.com");
+
+
+
+   }
+
+
+
+
 }
