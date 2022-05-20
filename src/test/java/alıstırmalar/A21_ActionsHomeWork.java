@@ -37,6 +37,7 @@ public class A21_ActionsHomeWork extends TestBase {
         actions.clickAndHold(clikAndHoldElementi).perform();
         //7-“Click and hold" kutusunda cikan yaziyi yazdırın
         String clikAndHoldTexti=clikAndHoldElementi.getText();
+        actions.release().perform();
         System.out.println(clikAndHoldTexti);
        // 8-“Double click me" butonunu cift tiklayin
 
