@@ -8,10 +8,13 @@ public class C05_FileUpload extends TestBase {
     @Test
     public void test01() throws InterruptedException {
         //Tests packagenin altina bir class oluşturun : C05_UploadFile
+
         //https://the-internet.herokuapp.com/upload adresine gidelim
         driver.get("https://the-internet.herokuapp.com/upload");
+
         //chooseFile butonuna basalim
         //Yuklemek istediginiz dosyayi secelim.
+
         /*
         bu islemi selnium ile yapma imkanimiz yok cunku web tabanli bir uygulama degil
         bu durumda sendKeys() imdadimiza yetisir
