@@ -59,7 +59,7 @@ public class C01_Cookies extends TestBase {
         //6- eklediginiz cookie’nin sayfaya eklendigini test edin
         Assert.assertTrue(cookiesSet.contains(cookie));
         //7- ismi skin olan cookie’yi silin ve silindigini test edin
-        driver.manage().getCookieNamed("skin");
+        driver.manage().deleteCookieNamed("skin");
         Assert.assertFalse(cookiesSet.contains("skin"));
         //8- tum cookie’leri silin ve silindigini test edin
         driver.manage().deleteAllCookies();

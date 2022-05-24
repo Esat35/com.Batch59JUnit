@@ -1,11 +1,14 @@
 package day13_cookies_webTables;
+
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
+
 import java.util.List;
+
 public class C02_WebTables extends TestBase {
     @Test
     public void webTable() {
@@ -17,47 +20,48 @@ public class C02_WebTables extends TestBase {
 
         //● table( ) metodu oluşturun
         //          ○ Tüm table body’sinin boyutunu(sutun sayisi) bulun. /tbody
-        List<WebElement> sutunBasliklariListesi= driver.findElements(By.xpath("//thead//tr[1]//th"));
+        List<WebElement> sutunBasliklariListesi = driver.findElements(By.xpath("//thead//tr[1]//th"));
         System.out.println("Sutun Sayisi : " + sutunBasliklariListesi.size());
 
         //          ○ Table’daki tum body’I ve başlıkları(headers) konsolda yazdırın.
+        //*******************************************
         // Tum body'i bir String olarak yazdirmak isterseniz
         // body webElementini locate edip, getText() method'u ile yazdirabilirsiniz
-        WebElement tumBody= driver.findElement(By.xpath("//tbody"));
+        WebElement tumBody = driver.findElement(By.xpath("//tbody"));
         System.out.println(tumBody.getText());
 
         //● printRows( ) metodu oluşturun //tr
         //          ○ table body’sinde bulunan toplam satir(row) sayısını bulun.
-        List<WebElement> satirlarListesi= driver.findElements(By.xpath("//tbody//tr"));
+        List<WebElement> satirlarListesi = driver.findElements(By.xpath("//tbody//tr"));
         System.out.println("Satir sayisi : " + satirlarListesi.size());
 
         //          ○ Table body’sinde bulunan satirlari(rows) konsolda yazdırın.
-        for (WebElement each: satirlarListesi
+        for (WebElement each : satirlarListesi
         ) {
             System.out.println(each.getText());
         }
 
         //          ○ 4.satirdaki(row) elementleri konsolda yazdırın.
-        List<WebElement> cellList=driver.findElements(By.xpath("//tbody//tr[4]//td"));
-        for (WebElement each: cellList
+        List<WebElement> cellList = driver.findElements(By.xpath("//tbody//tr[4]//td"));
+        for (WebElement each : cellList
         ) {
             System.out.println(each.getText());
         }
 
         //          Email basligindaki tum elementleri(sutun) konsolda yazdırın.
         // once email basliginin kacinci sutunda oldugunu bulalim
-        List<WebElement> basliklarListesi=driver.findElements(By.xpath("//thead//tr[1]//th"));
-        int emailSutunNo=0;
+        List<WebElement> basliklarListesi = driver.findElements(By.xpath("//thead//tr[1]//th"));
+        int emailSutunNo = 0;
 
-        for (int i = 0; i < basliklarListesi.size() ; i++) {
-            if (basliklarListesi.get(i).getText().equals("Email")){
-                emailSutunNo=i;
+        for (int i = 0; i < basliklarListesi.size(); i++) {
+            if (basliklarListesi.get(i).getText().equals("Email")) {
+                emailSutunNo = i;
             }
         }
 
-        List<WebElement> emailSutunListesi=
-                driver.findElements(By.xpath("//tbody//td["+(emailSutunNo+1)+"]"));
-        for (WebElement each: emailSutunListesi) {
+        List<WebElement> emailSutunListesi =
+                driver.findElements(By.xpath("//tbody//td[" + (emailSutunNo + 1) + "]"));
+        for (WebElement each : emailSutunListesi) {
             System.out.println(each.getText());
         }
     }

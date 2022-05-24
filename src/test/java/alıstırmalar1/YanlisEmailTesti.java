@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C03_YanlisEmailTesti {
+public class YanlisEmailTesti {
     WebDriver driver;
 
     @Before
@@ -40,8 +40,8 @@ public class C03_YanlisEmailTesti {
 
         //Email kutusuna @isareti olmayan bir mail yazip enter’a
         //bastigimizda “Invalid email address” uyarisi ciktigini test edelim
-        driver.findElement(By.xpath("//input[@name='email_create']")).sendKeys("alangmail.com" + Keys.ENTER);
-        WebElement uyariElementi = driver.findElement(By.xpath("//*[text()='Invalid email address.']"));
-        Assert.assertTrue(uyariElementi.isDisplayed());
+        driver.findElement(By.xpath("//input[@name='email_create']")).sendKeys("rkkaplangmail.com" + Keys.ENTER);
+        WebElement uyari = driver.findElement(By.xpath("//*[text()='Invalid email address.']"));
+        Assert.assertTrue(uyari.isDisplayed());
     }
 }
