@@ -1,4 +1,4 @@
-package day15_writeExcel_screanShot;
+package day15_writeExcel_screenShot;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
@@ -8,12 +8,10 @@ import utilities.TestBase;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
-public class C02_TumSayfaScreanShot extends TestBase {
+public class C02_TumSayfaScreenShot extends TestBase {
     @Test
     public void tumSayfaScreanShot() throws IOException {
         //amazon sayfasına gıdıp tum sayfanın fotografını cekelım.
